@@ -8,7 +8,7 @@ exports.handler = (event, context, callback) => {
   const accessToken = process.env.GITHUB_API_KEY;
   const query = `
   query {
-    repositoryOwner(login:"jhans830@gmail.com"){
+    repositoryOwner(login:"jhans830"){
       pinnedRepositories(first:10) {
         nodes {
           name
