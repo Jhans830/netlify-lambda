@@ -42,7 +42,7 @@ exports.handler = (event, context, callback) => {
       url: URL,
       data: JSON.stringify({ query }),
       headers: {
-        Authorization: `Bearer ${accessToken}`
+        Authorization: `Basic ${accessToken}`
       }
     })
       .then(res => send(res.data.data.repositoryOwner.pinnedRepositories.nodes))
