@@ -5,7 +5,7 @@ const axios = require("axios");
 
 exports.handler = (event, context, callback) => {
   const URL = `https://api.github.com/graphql`;
-  const accessToken = "7e27c42644a636cbe38e5e8aa486ef1b907390ae";
+  const accessToken = process.env.GITHUB_API_KEY;
   const query = `
   query {
     repositoryOwner(login:"jhans830@gmail.com"){
@@ -42,7 +42,7 @@ exports.handler = (event, context, callback) => {
       url: URL,
       data: JSON.stringify({ query }),
       headers: {
-        Authorization: `Bearer c8d54f276daae14b8045184a6f171d0a15976893`
+        Authorization: `Bearer ${accessToken}`
       }
     })
       .then(res => send(res.data.data.repositoryOwner.pinnedRepositories.nodes))
