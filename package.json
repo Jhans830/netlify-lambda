@@ -1,0 +1,13 @@
+{
+  "name": "netlify-lambda-functions",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "build:lambda": "netlify-lambda build src/lambda"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "netlify-lambda": "^0.4.0"
+  }
+}
