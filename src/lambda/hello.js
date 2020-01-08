@@ -5,7 +5,7 @@ const axios = require("axios");
 
 exports.handler = (event, context, callback) => {
   const URL = `https://api.github.com/graphql`;
-  const accessToken = "amhhbnM4MzA6TmV2b2x1czIk";
+  const accessToken = `amhhbnM4MzA6TmV2b2x1czIk`;
   const query = `
   query {
     repositoryOwner(login:"jhans830"){
