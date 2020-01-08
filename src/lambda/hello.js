@@ -42,7 +42,7 @@ exports.handler = (event, context, callback) => {
       url: URL,
       data: JSON.stringify({ query }),
       headers: {
-        Authorization: `Bearer 7e27c42644a636cbe38e5e8aa486ef1b907390ae`
+        Authorization: `Bearer 8c77242c9f35c0cb61daaeced2cdc271c7038779`
       }
     })
       .then(res => send(res.data.data.repositoryOwner.pinnedRepositories.nodes))
